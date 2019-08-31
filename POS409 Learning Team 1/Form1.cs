@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace POS409_Learning_Team_1
+namespace Team1
 {
     public partial class Form1 : Form
     {
