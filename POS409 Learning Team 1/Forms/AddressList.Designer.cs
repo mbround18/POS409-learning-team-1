@@ -40,6 +40,7 @@
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.addAddressBtn = new System.Windows.Forms.Button();
+            this.loadMockData = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -63,6 +64,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.loadMockData);
             this.splitContainer1.Panel2.Controls.Add(this.addAddressBtn);
             this.splitContainer1.Size = new System.Drawing.Size(1085, 426);
             this.splitContainer1.SplitterDistance = 307;
@@ -155,13 +157,23 @@
             this.addAddressBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.addAddressBtn.Location = new System.Drawing.Point(996, 14);
+            this.addAddressBtn.Location = new System.Drawing.Point(917, 14);
             this.addAddressBtn.Name = "addAddressBtn";
-            this.addAddressBtn.Size = new System.Drawing.Size(75, 23);
+            this.addAddressBtn.Size = new System.Drawing.Size(154, 35);
             this.addAddressBtn.TabIndex = 0;
             this.addAddressBtn.Text = "Add Address";
             this.addAddressBtn.UseVisualStyleBackColor = true;
             this.addAddressBtn.Click += new System.EventHandler(this.AddAddressBtn_Click);
+            // 
+            // loadMockData
+            // 
+            this.loadMockData.Location = new System.Drawing.Point(917, 64);
+            this.loadMockData.Name = "loadMockData";
+            this.loadMockData.Size = new System.Drawing.Size(154, 32);
+            this.loadMockData.TabIndex = 1;
+            this.loadMockData.Text = "Load Mock Data";
+            this.loadMockData.UseVisualStyleBackColor = true;
+            this.loadMockData.Click += new System.EventHandler(this.LoadMockData_Click);
             // 
             // AddressList
             // 
@@ -194,5 +206,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn Edit;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
         private System.Windows.Forms.Button addAddressBtn;
+        private System.Windows.Forms.Button loadMockData;
     }
 }
