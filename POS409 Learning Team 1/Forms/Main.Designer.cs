@@ -28,81 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.controlPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.mapContent = new System.Windows.Forms.FlowLayoutPanel();
-            this.MapControl = new GMap.NET.WindowsForms.GMapControl();
-            this.mapContent.SuspendLayout();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // controlPanel
+            // splitContainer1
             // 
-            this.controlPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.controlPanel.Location = new System.Drawing.Point(12, 12);
-            this.controlPanel.Name = "controlPanel";
-            this.controlPanel.Size = new System.Drawing.Size(182, 426);
-            this.controlPanel.TabIndex = 0;
-            this.controlPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ControlPanel_Paint);
-            // 
-            // mapContent
-            // 
-            this.mapContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.mapContent.Controls.Add(this.MapControl);
-            this.mapContent.Location = new System.Drawing.Point(200, 12);
-            this.mapContent.Name = "mapContent";
-            this.mapContent.Size = new System.Drawing.Size(588, 426);
-            this.mapContent.TabIndex = 1;
-            this.mapContent.Paint += new System.Windows.Forms.PaintEventHandler(this.MapContent_Paint);
-            // 
-            // MapControl
-            // 
-            this.MapControl.Bearing = 0F;
-            this.MapControl.CanDragMap = true;
-            this.MapControl.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.MapControl.EmptyTileColor = System.Drawing.Color.Navy;
-            this.MapControl.GrayScaleMode = false;
-            this.MapControl.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
-            this.MapControl.LevelsKeepInMemmory = 5;
-            this.MapControl.Location = new System.Drawing.Point(3, 3);
-            this.MapControl.MarkersEnabled = true;
-            this.MapControl.MaxZoom = 2;
-            this.MapControl.MinZoom = 2;
-            this.MapControl.MouseWheelZoomEnabled = true;
-            this.MapControl.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
-            this.MapControl.Name = "MapControl";
-            this.MapControl.NegativeMode = false;
-            this.MapControl.PolygonsEnabled = true;
-            this.MapControl.RetryLoadTile = 0;
-            this.MapControl.RoutesEnabled = true;
-            this.MapControl.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
-            this.MapControl.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
-            this.MapControl.ShowTileGridLines = false;
-            this.MapControl.Size = new System.Drawing.Size(585, 423);
-            this.MapControl.TabIndex = 0;
-            this.MapControl.Zoom = 0D;
-            this.MapControl.Load += new System.EventHandler(this.GMapControl1_Load_1);
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Size = new System.Drawing.Size(800, 450);
+            this.splitContainer1.SplitterDistance = 202;
+            this.splitContainer1.TabIndex = 0;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.mapContent);
-            this.Controls.Add(this.controlPanel);
+            this.Controls.Add(this.splitContainer1);
             this.Name = "Main";
             this.Text = "Main";
-            this.mapContent.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel controlPanel;
-        private System.Windows.Forms.FlowLayoutPanel mapContent;
-        private GMap.NET.WindowsForms.GMapControl MapControl;
+        private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }

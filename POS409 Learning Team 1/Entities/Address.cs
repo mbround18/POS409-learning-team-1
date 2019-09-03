@@ -9,6 +9,7 @@ namespace POS409_Learning_Team_1.Entities
     
     class Address
     {
+        public Guid id;
         public string Address1;
         public string Address2;
         public string City;
@@ -21,6 +22,7 @@ namespace POS409_Learning_Team_1.Entities
 
         public Address(string address1, string address2 = "", string city = "", string state = "", string country = "", string zipCode = "")
         {
+            id = Guid.NewGuid();
             Address1 = address1;
             Address2 = address2;
             City = city;
@@ -29,17 +31,18 @@ namespace POS409_Learning_Team_1.Entities
             ZipCode = zipCode;
         }
 
-        public new string ToString
+        private List<string> GetPropList()
         {
-            get
-            {
-                List<string> props = new List<string>() { Address1, City, State, Country, ZipCode };
-                if (Address2 != string.Empty)
-                {
-                    props.Insert(1, Address2);
-                }
-                return string.Join(", ", props.ToArray());
-            }
+            return  new List<string>() { id + "", Address1, Address2, City, State, Country, ZipCode };
+        }
+
+        public new string ToString()
+        {
+            return string.Join(", ", ToArray());
+        }
+        public string[] ToArray()
+        {
+            return GetPropList().ToArray();
         }
     }
 }
