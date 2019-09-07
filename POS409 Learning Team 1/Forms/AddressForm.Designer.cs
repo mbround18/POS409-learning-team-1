@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,42 +44,7 @@
             this.closeFormBtn = new System.Windows.Forms.Button();
             this.saveBtn = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.label7);
-            this.splitContainer1.Panel1.Controls.Add(this.label6);
-            this.splitContainer1.Panel1.Controls.Add(this.label5);
-            this.splitContainer1.Panel1.Controls.Add(this.label4);
-            this.splitContainer1.Panel1.Controls.Add(this.label3);
-            this.splitContainer1.Panel1.Controls.Add(this.label2);
-            this.splitContainer1.Panel1.Controls.Add(this.label1);
-            this.splitContainer1.Panel1.Controls.Add(this.zipCodeTextFiield);
-            this.splitContainer1.Panel1.Controls.Add(this.countryTextFiield);
-            this.splitContainer1.Panel1.Controls.Add(this.addressLine2TextFiield);
-            this.splitContainer1.Panel1.Controls.Add(this.cityTextFiield);
-            this.splitContainer1.Panel1.Controls.Add(this.stateTextFiield);
-            this.splitContainer1.Panel1.Controls.Add(this.addressLine1TextFiield);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.closeFormBtn);
-            this.splitContainer1.Panel2.Controls.Add(this.saveBtn);
-            this.splitContainer1.Panel2.Controls.Add(this.deleteBtn);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 450);
-            this.splitContainer1.SplitterDistance = 597;
-            this.splitContainer1.TabIndex = 0;
             // 
             // label7
             // 
@@ -88,10 +52,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(151, 335);
+            this.label7.Location = new System.Drawing.Point(124, 656);
+            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 13);
-            this.label7.TabIndex = 12;
+            this.label7.Size = new System.Drawing.Size(93, 25);
+            this.label7.TabIndex = 28;
             this.label7.Text = "ZipCode";
             // 
             // label6
@@ -100,10 +65,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(151, 274);
+            this.label6.Location = new System.Drawing.Point(124, 539);
+            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 13);
-            this.label6.TabIndex = 11;
+            this.label6.Size = new System.Drawing.Size(87, 25);
+            this.label6.TabIndex = 27;
             this.label6.Text = "Country";
             // 
             // label5
@@ -112,10 +78,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(151, 218);
+            this.label5.Location = new System.Drawing.Point(124, 431);
+            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 13);
-            this.label5.TabIndex = 10;
+            this.label5.Size = new System.Drawing.Size(62, 25);
+            this.label5.TabIndex = 26;
             this.label5.Text = "State";
             // 
             // label4
@@ -124,10 +91,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(151, 162);
+            this.label4.Location = new System.Drawing.Point(124, 324);
+            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(24, 13);
-            this.label4.TabIndex = 9;
+            this.label4.Size = new System.Drawing.Size(49, 25);
+            this.label4.TabIndex = 25;
             this.label4.Text = "City";
             // 
             // label3
@@ -136,10 +104,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(151, 99);
+            this.label3.Location = new System.Drawing.Point(124, 202);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 13);
-            this.label3.TabIndex = 8;
+            this.label3.Size = new System.Drawing.Size(156, 25);
+            this.label3.TabIndex = 23;
             this.label3.Text = "Address Line 2";
             // 
             // label2
@@ -149,10 +118,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(362, 78);
+            this.label2.Location = new System.Drawing.Point(546, 162);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
-            this.label2.TabIndex = 7;
+            this.label2.Size = new System.Drawing.Size(113, 25);
+            this.label2.TabIndex = 21;
             this.label2.Text = "* Required";
             // 
             // label1
@@ -161,10 +131,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(151, 39);
+            this.label1.Location = new System.Drawing.Point(124, 87);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 13);
-            this.label1.TabIndex = 6;
+            this.label1.Size = new System.Drawing.Size(91, 25);
+            this.label1.TabIndex = 19;
             this.label1.Text = "Address";
             // 
             // zipCodeTextFiield
@@ -172,70 +143,77 @@
             this.zipCodeTextFiield.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zipCodeTextFiield.Location = new System.Drawing.Point(154, 351);
+            this.zipCodeTextFiield.Location = new System.Drawing.Point(130, 687);
+            this.zipCodeTextFiield.Margin = new System.Windows.Forms.Padding(6);
             this.zipCodeTextFiield.Name = "zipCodeTextFiield";
-            this.zipCodeTextFiield.Size = new System.Drawing.Size(265, 20);
-            this.zipCodeTextFiield.TabIndex = 5;
+            this.zipCodeTextFiield.Size = new System.Drawing.Size(526, 31);
+            this.zipCodeTextFiield.TabIndex = 18;
             // 
             // countryTextFiield
             // 
             this.countryTextFiield.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.countryTextFiield.Location = new System.Drawing.Point(154, 290);
+            this.countryTextFiield.Location = new System.Drawing.Point(130, 570);
+            this.countryTextFiield.Margin = new System.Windows.Forms.Padding(6);
             this.countryTextFiield.Name = "countryTextFiield";
-            this.countryTextFiield.Size = new System.Drawing.Size(265, 20);
-            this.countryTextFiield.TabIndex = 4;
+            this.countryTextFiield.Size = new System.Drawing.Size(526, 31);
+            this.countryTextFiield.TabIndex = 17;
             // 
             // addressLine2TextFiield
             // 
             this.addressLine2TextFiield.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.addressLine2TextFiield.Location = new System.Drawing.Point(154, 115);
+            this.addressLine2TextFiield.Location = new System.Drawing.Point(130, 233);
+            this.addressLine2TextFiield.Margin = new System.Windows.Forms.Padding(6);
             this.addressLine2TextFiield.Name = "addressLine2TextFiield";
-            this.addressLine2TextFiield.Size = new System.Drawing.Size(265, 20);
-            this.addressLine2TextFiield.TabIndex = 1;
+            this.addressLine2TextFiield.Size = new System.Drawing.Size(526, 31);
+            this.addressLine2TextFiield.TabIndex = 14;
             // 
             // cityTextFiield
             // 
             this.cityTextFiield.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cityTextFiield.Location = new System.Drawing.Point(154, 178);
+            this.cityTextFiield.Location = new System.Drawing.Point(130, 354);
+            this.cityTextFiield.Margin = new System.Windows.Forms.Padding(6);
             this.cityTextFiield.Name = "cityTextFiield";
-            this.cityTextFiield.Size = new System.Drawing.Size(265, 20);
-            this.cityTextFiield.TabIndex = 2;
+            this.cityTextFiield.Size = new System.Drawing.Size(526, 31);
+            this.cityTextFiield.TabIndex = 15;
             // 
             // stateTextFiield
             // 
             this.stateTextFiield.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.stateTextFiield.Location = new System.Drawing.Point(154, 234);
+            this.stateTextFiield.Location = new System.Drawing.Point(130, 462);
+            this.stateTextFiield.Margin = new System.Windows.Forms.Padding(6);
             this.stateTextFiield.Name = "stateTextFiield";
-            this.stateTextFiield.Size = new System.Drawing.Size(265, 20);
-            this.stateTextFiield.TabIndex = 3;
+            this.stateTextFiield.Size = new System.Drawing.Size(526, 31);
+            this.stateTextFiield.TabIndex = 16;
             // 
             // addressLine1TextFiield
             // 
             this.addressLine1TextFiield.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.addressLine1TextFiield.Location = new System.Drawing.Point(154, 55);
+            this.addressLine1TextFiield.Location = new System.Drawing.Point(130, 118);
+            this.addressLine1TextFiield.Margin = new System.Windows.Forms.Padding(6);
             this.addressLine1TextFiield.Name = "addressLine1TextFiield";
-            this.addressLine1TextFiield.Size = new System.Drawing.Size(265, 20);
-            this.addressLine1TextFiield.TabIndex = 0;
+            this.addressLine1TextFiield.Size = new System.Drawing.Size(526, 31);
+            this.addressLine1TextFiield.TabIndex = 13;
             // 
             // closeFormBtn
             // 
             this.closeFormBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.closeFormBtn.Location = new System.Drawing.Point(17, 412);
+            this.closeFormBtn.Location = new System.Drawing.Point(800, 667);
+            this.closeFormBtn.Margin = new System.Windows.Forms.Padding(6);
             this.closeFormBtn.Name = "closeFormBtn";
-            this.closeFormBtn.Size = new System.Drawing.Size(170, 26);
-            this.closeFormBtn.TabIndex = 8;
+            this.closeFormBtn.Size = new System.Drawing.Size(340, 50);
+            this.closeFormBtn.TabIndex = 24;
             this.closeFormBtn.Text = "Close Form";
             this.closeFormBtn.UseVisualStyleBackColor = true;
             this.closeFormBtn.Click += new System.EventHandler(this.CloseFormBtn_Click);
@@ -245,10 +223,11 @@
             this.saveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.saveBtn.Location = new System.Drawing.Point(17, 305);
+            this.saveBtn.Location = new System.Drawing.Point(800, 462);
+            this.saveBtn.Margin = new System.Windows.Forms.Padding(6);
             this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(170, 26);
-            this.saveBtn.TabIndex = 6;
+            this.saveBtn.Size = new System.Drawing.Size(340, 50);
+            this.saveBtn.TabIndex = 20;
             this.saveBtn.Text = "Save Address";
             this.saveBtn.UseVisualStyleBackColor = true;
             this.saveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
@@ -258,43 +237,47 @@
             this.deleteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.deleteBtn.Location = new System.Drawing.Point(17, 361);
+            this.deleteBtn.Location = new System.Drawing.Point(800, 569);
+            this.deleteBtn.Margin = new System.Windows.Forms.Padding(6);
             this.deleteBtn.Name = "deleteBtn";
-            this.deleteBtn.Size = new System.Drawing.Size(170, 26);
-            this.deleteBtn.TabIndex = 7;
+            this.deleteBtn.Size = new System.Drawing.Size(340, 50);
+            this.deleteBtn.TabIndex = 22;
             this.deleteBtn.Text = "Delete Address";
             this.deleteBtn.UseVisualStyleBackColor = true;
             this.deleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
             // AddressForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.splitContainer1);
+            this.ClientSize = new System.Drawing.Size(1600, 865);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.zipCodeTextFiield);
+            this.Controls.Add(this.countryTextFiield);
+            this.Controls.Add(this.addressLine2TextFiield);
+            this.Controls.Add(this.cityTextFiield);
+            this.Controls.Add(this.stateTextFiield);
+            this.Controls.Add(this.addressLine1TextFiield);
+            this.Controls.Add(this.closeFormBtn);
+            this.Controls.Add(this.saveBtn);
+            this.Controls.Add(this.deleteBtn);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "AddressForm";
             this.Text = "AddressForm";
             this.Load += new System.EventHandler(this.SyncAddressToForm);
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel1.PerformLayout();
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.TextBox zipCodeTextFiield;
-        private System.Windows.Forms.TextBox countryTextFiield;
-        private System.Windows.Forms.TextBox addressLine2TextFiield;
-        private System.Windows.Forms.TextBox cityTextFiield;
-        private System.Windows.Forms.TextBox stateTextFiield;
-        private System.Windows.Forms.TextBox addressLine1TextFiield;
-        private System.Windows.Forms.Button saveBtn;
-        private System.Windows.Forms.Button deleteBtn;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -302,6 +285,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox zipCodeTextFiield;
+        private System.Windows.Forms.TextBox countryTextFiield;
+        private System.Windows.Forms.TextBox addressLine2TextFiield;
+        private System.Windows.Forms.TextBox cityTextFiield;
+        private System.Windows.Forms.TextBox stateTextFiield;
+        private System.Windows.Forms.TextBox addressLine1TextFiield;
         private System.Windows.Forms.Button closeFormBtn;
+        private System.Windows.Forms.Button saveBtn;
+        private System.Windows.Forms.Button deleteBtn;
     }
 }

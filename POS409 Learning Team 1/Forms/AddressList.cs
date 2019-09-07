@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.FileIO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace POS409_Learning_Team_1.Forms
 {
     public partial class AddressList : Form
     {
+        private bool mockDataLoaded = false;
         public AddressList()
         {
 
@@ -88,6 +90,31 @@ namespace POS409_Learning_Team_1.Forms
                 cells.Add("Delete");
                 AddressListDataTable.Rows.Add(cells.ToArray());                
             }
+        }
+
+        private void LoadMockData_Click(object sender, EventArgs e)
+        {
+            if (!mockDataLoaded)
+            {
+                var path = @"MOCK_DATA.csv"; // Habeeb, "Dubai Media City, Dubai"
+                using (TextFieldParser csvParser = new TextFieldParser(path))
+                {
+                    csvParser.SetDelimiters(new string[] { "," });
+                    csvParser.HasFieldsEnclosedInQuotes = true;
+                    while (!csvParser.EndOfData)
+                    {
+                        // Read current line fields, pointer moves to the next line.
+                        string[] fields = csvParser.ReadFields();                        
+                        Repositories.Addresses.Create(fields[1], fields[2], fields[3], fields[4], fields[5], fields[6]);                                                     
+                    }
+                }
+                ResetDataTable();
+                mockDataLoaded = true;
+            } else
+            {
+                MessageBox.Show("Mock Data already loaded!");
+            }
+           
         }
     }
 }

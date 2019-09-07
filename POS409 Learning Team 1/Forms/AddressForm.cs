@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using POS409_Learning_Team_1.Services;
 
 namespace POS409_Learning_Team_1.Forms
 {
@@ -42,19 +43,60 @@ namespace POS409_Learning_Team_1.Forms
             currentAddress.Country = countryTextFiield.Text;
             currentAddress.ZipCode = zipCodeTextFiield.Text;
         }
-    
+
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-            if (addressLine1TextFiield.Text == string.Empty)
-            {
-                MessageBox.Show("Woah line 1 is required!", "error");
-            } else
+            if (InputValidation())
             {
                 SyncFormToAddress();
                 Repositories.Addresses.Update(currentAddress);
                 MessageBox.Show("Saved Address", "Success!");
                 Close();
-            }            
+            }
+        }
+
+        private Boolean InputValidation()
+        {
+            if (addressLine1TextFiield.Text == string.Empty)
+            {
+                MessageBox.Show("Woah line 1 is required!", "error");
+                addressLine1TextFiield.Focus();
+                return false;
+            }
+            if (cityTextFiield.Text == string.Empty)
+            {
+                MessageBox.Show("Please input city!", "error");
+                cityTextFiield.Focus();
+                return false;
+            }
+            if (stateTextFiield.Text == string.Empty)
+            {
+                MessageBox.Show("Please input state!", "error");
+                stateTextFiield.Focus();
+                return false;
+            }
+            if (countryTextFiield.Text == string.Empty)
+            {
+                MessageBox.Show("Please input country!", "error");
+                countryTextFiield.Focus();
+                return false;
+            }
+            if (zipCodeTextFiield.Text == string.Empty)
+            {
+                MessageBox.Show("Please input zipcode!", "error");
+                zipCodeTextFiield.Focus();
+                return false;
+            }
+            else
+            {
+                if (!BusinessRule.IsZipCode(zipCodeTextFiield.Text))
+                {
+                    MessageBox.Show("Please input valid zipcode!", "error");
+                    zipCodeTextFiield.Focus();
+                    return false;
+                }
+            }
+            return true;
         }
 
         private void CloseFormBtn_Click(object sender, EventArgs e)
@@ -66,6 +108,11 @@ namespace POS409_Learning_Team_1.Forms
         {
             Repositories.Addresses.Delete(currentAddress.id);
             Close();
+        }
+
+        private void saveBtn_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
