@@ -39,6 +39,8 @@
             this.saveDestinationAddressBtn = new System.Windows.Forms.Button();
             this.saveSourceAddressBtn = new System.Windows.Forms.Button();
             this.viewAddressBookBtn = new System.Windows.Forms.Button();
+            this.pickSrcAddressBtn = new System.Windows.Forms.Button();
+            this.pickDestAddressBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // gMapControl
@@ -198,11 +200,39 @@
             this.viewAddressBookBtn.UseVisualStyleBackColor = true;
             this.viewAddressBookBtn.Click += new System.EventHandler(this.ViewAddressBookBtn_Click);
             // 
+            // pickSrcAddressBtn
+            // 
+            this.pickSrcAddressBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pickSrcAddressBtn.Location = new System.Drawing.Point(13, 167);
+            this.pickSrcAddressBtn.Name = "pickSrcAddressBtn";
+            this.pickSrcAddressBtn.Size = new System.Drawing.Size(111, 23);
+            this.pickSrcAddressBtn.TabIndex = 14;
+            this.pickSrcAddressBtn.Text = "Pick Existing Src.";
+            this.pickSrcAddressBtn.UseVisualStyleBackColor = true;
+            this.pickSrcAddressBtn.Click += new System.EventHandler(this.PickSrcAddressBtn_Click);
+            // 
+            // pickDestAddressBtn
+            // 
+            this.pickDestAddressBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pickDestAddressBtn.Location = new System.Drawing.Point(12, 393);
+            this.pickDestAddressBtn.Name = "pickDestAddressBtn";
+            this.pickDestAddressBtn.Size = new System.Drawing.Size(111, 23);
+            this.pickDestAddressBtn.TabIndex = 15;
+            this.pickDestAddressBtn.Text = "Pick Existing Dest.";
+            this.pickDestAddressBtn.UseVisualStyleBackColor = true;
+            this.pickDestAddressBtn.Click += new System.EventHandler(this.PickDestAddressBtn_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1485, 623);
+            this.Controls.Add(this.pickDestAddressBtn);
+            this.Controls.Add(this.pickSrcAddressBtn);
             this.Controls.Add(this.viewAddressBookBtn);
             this.Controls.Add(this.saveSourceAddressBtn);
             this.Controls.Add(this.saveDestinationAddressBtn);
@@ -216,6 +246,7 @@
             this.Controls.Add(this.gMapControl);
             this.Name = "Main";
             this.Text = "Main";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,5 +265,7 @@
         private System.Windows.Forms.Button saveDestinationAddressBtn;
         private System.Windows.Forms.Button saveSourceAddressBtn;
         private System.Windows.Forms.Button viewAddressBookBtn;
+        private System.Windows.Forms.Button pickSrcAddressBtn;
+        private System.Windows.Forms.Button pickDestAddressBtn;
     }
 }

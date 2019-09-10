@@ -35,14 +35,15 @@ namespace POS409_Learning_Team_1.Entities
         {
             return  new List<string>() { id + "", Address1, Address2, City, State, Country, ZipCode };
         }
-
+  
         public new string ToString()
         {
-            return string.Join(", ", ToArray());
+            List<string> props = GetPropList();
+            return string.Join(", ", props.Where((v, i) => i != 0 && v.Length > 0).ToArray());
         }
         public string[] ToArray()
         {
             return GetPropList().ToArray();
-        }
+        }        
     }
 }

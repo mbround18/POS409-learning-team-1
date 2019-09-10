@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualBasic.FileIO;
+using POS409_Learning_Team_1.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,9 @@ namespace POS409_Learning_Team_1.Forms
     public partial class AddressList : Form
     {
         private bool mockDataLoaded = false;
+
+        internal Address SelectedAddress { get; set; }
+
         public AddressList()
         {
 
@@ -34,6 +38,8 @@ namespace POS409_Learning_Team_1.Forms
         {
             int editButtonIndex = 7;
             int deleteButtonIndex = 8;
+            int selectButtonIndex = 9;
+            SelectedAddress = null;
             if (e.ColumnIndex == editButtonIndex)
             {
                 UpdateSelectedAddressFromDataGrid(e.RowIndex);
@@ -41,7 +47,13 @@ namespace POS409_Learning_Team_1.Forms
             if (e.ColumnIndex == deleteButtonIndex)
             {
                 RemoveAddressFromDataGrid(e.RowIndex);
-            }             
+            }
+            if (e.ColumnIndex == selectButtonIndex)
+            {
+                Guid id = Guid.Parse(AddressListDataTable[0, e.RowIndex].Value.ToString());
+                SelectedAddress = Repositories.Addresses.Read(id);
+                Close();
+            }
         }
         private void UpdateSelectedAddressFromDataGrid(int rowIndex)
         {
@@ -59,6 +71,7 @@ namespace POS409_Learning_Team_1.Forms
                 List<string> cells = addr.ToArray().ToList();
                 cells.Add("Edit");
                 cells.Add("Delete");
+                cells.Add("Select");
                 AddressListDataTable.Rows.Add(cells.ToArray());
             }
             
@@ -88,6 +101,7 @@ namespace POS409_Learning_Team_1.Forms
                 List<string> cells = addr.ToArray().ToList();
                 cells.Add("Edit");
                 cells.Add("Delete");
+                cells.Add("Select");
                 AddressListDataTable.Rows.Add(cells.ToArray());                
             }
         }
