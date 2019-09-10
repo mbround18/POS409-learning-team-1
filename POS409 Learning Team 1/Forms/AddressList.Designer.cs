@@ -39,8 +39,8 @@
             this.ZipCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.addAddressBtn = new System.Windows.Forms.Button();
             this.loadMockData = new System.Windows.Forms.Button();
+            this.addAddressBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -152,6 +152,18 @@
             this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // loadMockData
+            // 
+            this.loadMockData.Enabled = false;
+            this.loadMockData.Location = new System.Drawing.Point(917, 64);
+            this.loadMockData.Name = "loadMockData";
+            this.loadMockData.Size = new System.Drawing.Size(154, 32);
+            this.loadMockData.TabIndex = 1;
+            this.loadMockData.Text = "Load Mock Data";
+            this.loadMockData.UseVisualStyleBackColor = true;
+            this.loadMockData.Visible = false;
+            this.loadMockData.Click += new System.EventHandler(this.LoadMockData_Click);
+            // 
             // addAddressBtn
             // 
             this.addAddressBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -164,16 +176,6 @@
             this.addAddressBtn.Text = "Add Address";
             this.addAddressBtn.UseVisualStyleBackColor = true;
             this.addAddressBtn.Click += new System.EventHandler(this.AddAddressBtn_Click);
-            // 
-            // loadMockData
-            // 
-            this.loadMockData.Location = new System.Drawing.Point(917, 64);
-            this.loadMockData.Name = "loadMockData";
-            this.loadMockData.Size = new System.Drawing.Size(154, 32);
-            this.loadMockData.TabIndex = 1;
-            this.loadMockData.Text = "Load Mock Data";
-            this.loadMockData.UseVisualStyleBackColor = true;
-            this.loadMockData.Click += new System.EventHandler(this.LoadMockData_Click);
             // 
             // AddressList
             // 

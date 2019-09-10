@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FluentValidation;
 using POS409_Learning_Team_1.Services;
 
 namespace POS409_Learning_Team_1.Forms
@@ -48,10 +49,17 @@ namespace POS409_Learning_Team_1.Forms
         {
             if (InputValidation())
             {
-                SyncFormToAddress();
-                Repositories.Addresses.Update(currentAddress);
-                MessageBox.Show("Saved Address", "Success!");
-                Close();
+                try
+                {
+                    SyncFormToAddress();
+                    new Validations.AddressValidation().ValidateAndThrow(currentAddress);
+                    Repositories.Addresses.Update(currentAddress);
+                    MessageBox.Show("Saved Address", "Success!");
+                    Close();
+                } catch (ValidationException)
+                {
+                    MessageBox.Show("Address was not valid! Please edit and try again!", "Error");
+                }                
             }
         }
 

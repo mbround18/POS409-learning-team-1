@@ -16,7 +16,7 @@ namespace POS409_Learning_Team_1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Forms.AddressList());
+            Application.Run(new Forms.Main());
         }
     }
 }
