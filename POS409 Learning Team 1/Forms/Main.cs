@@ -61,7 +61,6 @@ namespace POS409_Learning_Team_1.Forms
                     break;
                 case "src":
                 default:
-                    sourceTextBox.Text
                     break;
             }
         }

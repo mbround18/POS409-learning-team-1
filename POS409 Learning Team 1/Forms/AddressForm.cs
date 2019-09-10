@@ -67,7 +67,7 @@ namespace POS409_Learning_Team_1.Forms
         {
             if (addressLine1TextFiield.Text == string.Empty)
             {
-                MessageBox.Show("Woah line 1 is required!", "error");
+                MessageBox.Show("Woah Address line 1 is required!", "error");
                 addressLine1TextFiield.Focus();
                 return false;
             }
