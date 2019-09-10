@@ -18,6 +18,7 @@ namespace POS409_Learning_Team_1.Forms
         {
             InitializeComponent();
             gMapControl.SetPositionByKeywords("Portland, Oregon");
+
         }
 
 
@@ -68,6 +69,31 @@ namespace POS409_Learning_Team_1.Forms
         private void ViewAddressBookBtn_Click(object sender, EventArgs e)
         {
             addressList.ShowDialog();
+        }
+
+        private void PickSrcAddressBtn_Click(object sender, EventArgs e)
+        {
+            addressList.ShowDialog();
+            Entities.Address addr = addressList.SelectedAddress;
+            if (addr != null)
+            {
+                sourceTextBox.Text = addr.ToString();
+            }
+        }
+
+        private void PickDestAddressBtn_Click(object sender, EventArgs e)
+        {
+            addressList.ShowDialog();
+            Entities.Address addr = addressList.SelectedAddress;
+            if (addr != null)
+            {
+                destinationTextBox.Text = addr.ToString();
+            }
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
