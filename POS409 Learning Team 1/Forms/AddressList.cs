@@ -22,6 +22,7 @@ namespace POS409_Learning_Team_1.Forms
         {
 
             InitializeComponent();
+            ResetDataTable();
         }
 
         private void SplitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
