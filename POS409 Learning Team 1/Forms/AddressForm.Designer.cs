@@ -49,6 +49,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label7
@@ -123,7 +125,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(214, 87);
+            this.label2.Location = new System.Drawing.Point(281, 87);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(20, 25);
@@ -139,9 +141,9 @@
             this.label1.Location = new System.Drawing.Point(124, 87);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 25);
+            this.label1.Size = new System.Drawing.Size(156, 25);
             this.label1.TabIndex = 19;
-            this.label1.Text = "Address";
+            this.label1.Text = "Address Line 1";
             // 
             // zipCodeTextFiield
             // 
@@ -214,10 +216,10 @@
             this.closeFormBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.closeFormBtn.Location = new System.Drawing.Point(800, 667);
+            this.closeFormBtn.Location = new System.Drawing.Point(62, 272);
             this.closeFormBtn.Margin = new System.Windows.Forms.Padding(6);
             this.closeFormBtn.Name = "closeFormBtn";
-            this.closeFormBtn.Size = new System.Drawing.Size(340, 50);
+            this.closeFormBtn.Size = new System.Drawing.Size(338, 48);
             this.closeFormBtn.TabIndex = 24;
             this.closeFormBtn.Text = "Close Form";
             this.closeFormBtn.UseVisualStyleBackColor = true;
@@ -228,10 +230,10 @@
             this.saveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.saveBtn.Location = new System.Drawing.Point(800, 462);
+            this.saveBtn.Location = new System.Drawing.Point(62, 67);
             this.saveBtn.Margin = new System.Windows.Forms.Padding(6);
             this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(340, 50);
+            this.saveBtn.Size = new System.Drawing.Size(338, 48);
             this.saveBtn.TabIndex = 20;
             this.saveBtn.Text = "Save Address";
             this.saveBtn.UseVisualStyleBackColor = true;
@@ -242,10 +244,10 @@
             this.deleteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.deleteBtn.Location = new System.Drawing.Point(800, 569);
+            this.deleteBtn.Location = new System.Drawing.Point(62, 174);
             this.deleteBtn.Margin = new System.Windows.Forms.Padding(6);
             this.deleteBtn.Name = "deleteBtn";
-            this.deleteBtn.Size = new System.Drawing.Size(340, 50);
+            this.deleteBtn.Size = new System.Drawing.Size(338, 48);
             this.deleteBtn.TabIndex = 22;
             this.deleteBtn.Text = "Delete Address";
             this.deleteBtn.UseVisualStyleBackColor = true;
@@ -321,11 +323,23 @@
             this.label12.TabIndex = 33;
             this.label12.Text = "*";
             // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.deleteBtn);
+            this.panel1.Controls.Add(this.saveBtn);
+            this.panel1.Controls.Add(this.closeFormBtn);
+            this.panel1.Location = new System.Drawing.Point(835, 118);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(486, 424);
+            this.panel1.TabIndex = 34;
+            // 
             // AddressForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1600, 865);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -344,13 +358,11 @@
             this.Controls.Add(this.cityTextFiield);
             this.Controls.Add(this.stateTextFiield);
             this.Controls.Add(this.addressLine1TextFiield);
-            this.Controls.Add(this.closeFormBtn);
-            this.Controls.Add(this.saveBtn);
-            this.Controls.Add(this.deleteBtn);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "AddressForm";
             this.Text = "AddressForm";
             this.Load += new System.EventHandler(this.SyncAddressToForm);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -379,5 +391,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel1;
     }
 }
