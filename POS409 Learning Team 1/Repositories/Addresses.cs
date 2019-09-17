@@ -8,7 +8,12 @@ namespace POS409_Learning_Team_1.Repositories
 {
     class Addresses
     {
-        private static List<Entities.Address> collection = new List<Entities.Address>();
+        private static List<Entities.Address> collection = new List<Entities.Address>()
+        {
+            new Entities.Address("5676 NE NW Clara Ln", "", "Hillsboro", "Oregon", "United States", "97124"),
+            new Entities.Address("1198 NE Orenco Station Pkwy", "", "Hillsboro", "Oregon", "United States", "97124")
+        };
+    
         public static Entities.Address Read(Guid id)
         {
             return collection.Where(address => address.id == id).FirstOrDefault();
